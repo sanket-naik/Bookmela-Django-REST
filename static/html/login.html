@@ -1,18 +1,53 @@
-<!-- <form ng-submit="login()">
-	<div style="color: red">{{login_error}}</div>
-	<div>
-		<label>Username</label>
-		<input type="text" ng-model="user.username">
-	</div>
 
-	<div>
-		<label>Password</label>
-		<input type="password" ng-model="user.password">
-	</div>
+<div class="row">
+<div class="container cont" id="a1" >
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="container cont hidden-xs">
+      <h2 style="text-align:center;" class="restext" >Login with Social Media or Manually</h2>
+      </div>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
 
-	<div>
-		<button type="submit">Submit</button>
-	</div>
-</form> -->
+     
 
- <div><h1>login page</h1></div>
+      <div class="col">
+        
+
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+
+      <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+       <div class="col">
+        <a href="#" class="fb btnlogin">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="#" class="twitter btnlogin">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="#" class="google btnlogin"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="#" style="color:white" class="btnlogin">Sign up</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btnlogin">Forgot password?</a>
+    </div>
+  </div>
+</div>
+</div>

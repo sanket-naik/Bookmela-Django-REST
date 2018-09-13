@@ -1,40 +1,305 @@
-<!-- 	<button ng-click="logout()">Logout</button>
-	<div ng-repeat='list in data' >
-		
 
-		<table>
-			<tr>
-				<td><h2>{{list.name}}</h2></td>
-			</tr>
-			<tr>
-				<td><label>Sort:</label></td>
-				<td>
-					<select ng-model="sortBy">
-						<option value="title">Title</option>
-						<option value="story_points">Story points</option>
-					</select>
-					<input type="checkbox" ng-model="reverse">
-					<label>Reverse</label>
-				</td>
-			</tr>
-			<tr>
-				<td><label>Filter:</label></td>
-				<td><input type="text" ng-model="filterBy"></td>
-			</tr>
-			<tr>
-				<td><input type="text" ng-model="title"></td>
-				<td><input type="submit" value="add" ng-click="add(list, title)" ></td>
-			</tr>
-		</table>
-		<hr>
-		<div ng-repeat='card in list.cards | filter:filterBy | orderBy:sortBy:reverse'> 
-			<scrumboard-card></scrumboard-card>
-		</div>
+    <div>
+      <!-- Title Home -->
+      <div class="jumbotron text-center bk" style="margin-bottom:0px;">
+        <div id="jumbo">
+        <h1 style="color:#fff">Welcome to BookMela</h1>      
+        <p style="color:#fff">Get programming books free of cost. Get started by seraching here.</p>
+        <div class="container-fluid">
+            <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6" >
+                 <input type="text" ng-model="selected" uib-typeahead="book for book in books | filter:$viewValue | limitTo:5" class="form-control" placeholder="Enter book title">
+                <br>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
 
-		
+        </div>
+      </div>
+      </div>
 
-	</div> -->
+    <!--   <input type="text" ng-model="mela.testdata"><h1>{{dta}}</h1>
+      <input type="button" ng-click="submit()"> -->
+      
+      <!-- Owl corosal -->
+     <!--  <div class="owl-carousel owl-theme">
+        
+            <div class="item col-md-5 border">
 
-	<div ng-controller="HomeController">
-		homepage <button ng-click="add()">click</button>
-	</div>
+                    <div class="row box-shadow border">
+                        <div class="col-md-5 border">
+                            <img class="lib-img-show img-responsive pull-right" src="cover1.jpeg">
+                        </div>
+                        <div class="col-md-6 border">
+                            <div class="lib-row lib-header border">
+                                Example library
+                                <div class="lib-header-seperator border"></div>
+                            </div>
+                            <div class=" border">
+                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        <div class="item" style="width:250px">
+            <img src="try/img.png">
+        </div>
+        <div class="item" style="width:250px">
+            <img src="try/img.png">
+        </div>
+        <div class="item" style="width:250px">
+            <img src="try/img.png">
+        </div>
+        <div class="item" style="width:250px">
+            <img src="try/img.png">
+        </div>
+        <div class="item" style="width:250px">
+            <img src="try/img.png">
+        </div>
+        <div class="item" style="width:250px">
+            <img src="try/img.png">
+        </div>
+      </div> -->
+       
+    <section class="section-padding">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="text-center section-headline services-head">
+            <h2>Our Services</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+          <!-- Start Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+                  
+                  <i class="fa fa-download icol" style="font-size:50px"></i>
+                                      
+                  <h4>Free Download</h4>
+                  <p>
+                    our bookstore provide free of cost books. even you can upload a book from your local disk and be a help for someone.
+                  </p>
+                </div>
+              <!-- end about-details -->
+         
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+                  <i class="fa fa-code fa-6 icol" style="font-size:50px";></i>
+                   
+                  <h4>Coders Home</h4>
+                  <p>
+                    we provide all the books which are usefull for a developer. some featured books like datastructure, c++, java etc.
+                  </p>
+                </div>
+              <!-- end about-details -->
+          
+          <div class="col-md-4 col-sm-4 col-xs-12 ">
+                  <i class="fa fa-university icol" style="font-size:50px"></i>
+                                    
+                  <h4>University Books</h4>
+                  <p>
+                    we have a bunch of books which are refered by universitys. Helpfull for MCA, Egg, M-tech and all the IT related courses.
+                  </p>
+                </div>
+              <!-- end about-details -->
+            </div>
+          </section>
+
+         <!--  <section >
+            <div style="background-color: #00b597">
+              <h1>efefne fe fj</h1>
+            </div>
+            
+          </section> -->
+
+          <section class="section-padding" style="background-color: #00b597">
+    <div class="container">
+      <div class="row center">
+        <div class="col-md-8 col-md-offset-2 ">
+        
+          <img src="media/about.png" style="max-width:300px; width:100%" class="center">
+          
+          <!-- <div class="km-space"></div> -->
+          <h5 class="lead text-center">"This website is user friendly. The main reason of this website is to to overcome the problem of costly books."</h5>
+        </div>
+      </div><!-- description text -->
+    </div>
+  </section>
+
+
+  <section  style="margin-top: 60px;margin-bottom: 60px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Timeline</h2>
+            <h3 class="section-subheading text-muted">Get started now</h3>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 50px">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="media/register.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Register</h4>
+                    <h4 class="subheading">Register and be a member</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="media/login.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Login</h4>
+                    <h4 class="subheading">Enter the room</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="media/upload.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Upload</h4>
+                    <h4 class="subheading">Upload the books</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="media/verify.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Verify</h4>
+                    <h4 class="subheading">Verify & publish books</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae it vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>Be Part
+                                    <br>Of Our
+                                    <br>Team!</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Start Footer bottom Area -->
+  <footer>
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <div class="footer-logo">
+                  <h2><span>Book</span>Mela</h2>
+                </div>
+
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                <div class="footer-icons">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-google"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>information</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </p>
+                <div class="footer-contacts">
+                  <p><span>Tel:</span> +91 9663058266</p>
+                  <p><span>Email:</span> 776sanket@gmail.com.com</p>
+                  <p><span>Working Hours:</span> 9am-5pm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+         <!--  <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>Instagram</h4>
+                <div class="flicker-img">
+                  <a href="#"><img src="img/portfolio/1.jpg" alt=""></a>
+                  <a href="#"><img src="img/portfolio/2.jpg" alt=""></a>
+                  <a href="#"><img src="img/portfolio/3.jpg" alt=""></a>
+                  <a href="#"><img src="img/portfolio/4.jpg" alt=""></a>
+                  <a href="#"><img src="img/portfolio/5.jpg" alt=""></a>
+                  <a href="#"><img src="img/portfolio/6.jpg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="footer-area-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright text-center">
+              <p>
+                &copy; Copyright <strong>BookMela</strong>. All Rights Reserved
+              </p>
+            </div>
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+              -->
+              Designed by <a href="#">BookMela</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+         
+           
+          
+</div>
+	

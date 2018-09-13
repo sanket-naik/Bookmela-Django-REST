@@ -1,20 +1,81 @@
 {% load staticfiles %}
 
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html> 
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <title>BookMela</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body  ng-app="bookmela.home">
-	<h1>homepage</h1>
-	<ng-view></ng-view>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
-<script src="{% static 'js/controller.js' %}"></script>
-<script src="{% static 'js/directive.js' %}"></script>
-<script src="{% static 'js/route.config.js' %}"></script>
+<body ng-app="bookmela.home" ng-controller="HomeController">
+ <nav class="navbar-default main-navigation navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-admin">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#!">BookMela <span class="glyphicon glyphicon-book"></span></a>
+                <p class="navbar-text hidden-xs">Learning Never Stops</p>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-admin">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-list " ></span> Category <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Page 1-1</a></li>
+                          <li><a href="#">Page 1-2</a></li>
+                          <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+                    <li>
+                       <a href="" ng-click="add()"> <span class="glyphicon glyphicon-lock"></span> Log In</a>
+                    </li>
+                    <li>
+                        <a href="#!signup" class="hidden-lg hidden-md"><span class="glyphicon glyphicon-pencil"></span> Sign Up</a>
+                    </li> 
+                </ul>
+                    
+                <!-- LOGIN - SIGNUP  -->
 
+                <ul class="nav navbar-nav navbar-right" style="padding-right: 15px">
+                    <li class="hidden-sm hidden-xs">
+                        <button type="button" class="btn btn-success navbar-btn"ng-click="add()">
+                            <span class="glyphicon glyphicon-lock"></span> Log In</a>
+                        </button>
+                        <button type="button" class="btn btn-danger navbar-btn" onclick="window.location.href='#!signup'">
+                            <a href="" class="link-button-color"><span class="glyphicon glyphicon-pencil"></span> Sign Up</a>
+                        </button>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+
+
+<div style="padding-top: 50px"></div>
+
+    <ng-view></ng-view>
+
+
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+		<script src="{% static 'js/controller.js' %}"></script>
+		<script src="{% static 'js/directive.js' %}"></script>
+		<script src="{% static 'js/route.config.js' %}"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 </body>
 </html>
+
