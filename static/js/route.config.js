@@ -1,14 +1,13 @@
 (function(){
 	'use strict';
 
-	angular.module('scrumboard.demo')
+	angular.module('bookmela.home')
 	.config(['$routeProvider', config])
-	.run(['$http', run]);
 
 	function config($routeProvider){
 		$routeProvider
 		.when('/',{
-			templateUrl: '/static/html/scrumboard.html',
+			templateUrl: '/static/html/home.html',
 			// controller: 'ScrumboardController',
 		})
 		.when('/login',{
