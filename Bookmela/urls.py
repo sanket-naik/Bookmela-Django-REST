@@ -22,4 +22,5 @@ from django.conf.urls import url, include
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^API/', include('app1.urls')),
+    url(r'^$',TemplateView.as_view(template_name='super.html')),
 ]
