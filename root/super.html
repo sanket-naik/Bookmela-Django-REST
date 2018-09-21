@@ -1,12 +1,12 @@
 {% load staticfiles %}
 
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
 <head>
     <title>BookMela</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -14,16 +14,20 @@
 <body ng-app="bookmela.home" ng-controller="HomeController">
  <nav class="navbar-default main-navigation navbar-fixed-top" role="navigation">
         <div class="container-fluid">
+
             <div class="navbar-header">
+
+                <a class="navbar-brand" href="#!">BookMela <span class="glyphicon glyphicon-book"></span></a>
+                <p class="navbar-text hidden-xs">Learning Never Stops</p>
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-admin">
-                    <span class="sr-only">Toggle Menu</span>
+                    <!-- <span class="sr-only">Toggle Menu</span> -->
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#!">BookMela <span class="glyphicon glyphicon-book"></span></a>
-                <p class="navbar-text hidden-xs">Learning Never Stops</p>
             </div>
+
             <div class="navbar-collapse collapse" id="navbar-admin">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
@@ -74,8 +78,10 @@
 		<script src="{% static 'js/controller.js' %}"></script>
 		<script src="{% static 'js/directive.js' %}"></script>
 		<script src="{% static 'js/route.config.js' %}"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+        
 </body>
 </html>
 
